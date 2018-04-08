@@ -10,6 +10,8 @@ my $temp = "output.html";
 my $html = shift @ARGV;
 my $pdf = shift @ARGV;
 my $autoren = shift @ARGV;
+my $autor1 = join(' ', (split /\s+/, $autoren)[0,1]);
+my $autor2 = join(' ', (split /\s+/, $autoren)[3,4]);
 
 
 open my $fh, '<', $html
@@ -23,14 +25,18 @@ while (<$fh>) {
     chomp;
 
     s/XXautorenXX/$autoren/g;
+    s/XXautor1XX/$autor1/g;
+    s/XXautor2XX/$autor2/g;
     print $out $_;
 }
+
+close $fh;
+close $out;
+
 
 say "Generating PDF...";
 system("wkhtmltopdf $temp $pdf");
 
-close $fh;
-close $out;
 unlink $temp;
 
 
@@ -44,7 +50,7 @@ convertToPdf.pl - Replace the name of the authors and create the pdf file
 
 convertToPdf.pl [options] html-file pdf-filename authors
 
-  e.g: perl convertToPdf Storyboard.hmtl Storyboard.pdf 'Max und Moritz'
+  e.g: perl convertToPdf Storyboard.hmtl Storyboard.pdf 'Max Muster und Moritz Leuenberger'
 
 =head1 DESCRIPTION
 
