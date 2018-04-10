@@ -11,7 +11,7 @@ echo %cd%
 echo
 
 echo Generate pdf file
-wkhtmltopdf.exe "U:\Dokumente\M152\HomageGIBZ\output.html" "U:\Dokumente\M152\HomageGIBZ\Storyboard.pdf"
+wkhtmltopdf.exe "U:\Dokumente\M152\HomageGIBZ\output.html" "U:\Dokumente\M152\HomageGIBZ\Storyboard_Steiner_Frank.pdf"
 
 echo Delete output file
 del "U:\Dokumente\M152\HomageGIBZ\output.html"
