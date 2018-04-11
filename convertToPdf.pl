@@ -35,7 +35,12 @@ close $out;
 
 
 say "Generating PDF...";
-system("wkhtmltopdf -B 20mm -L 25mm -R 20mm -T 20mm $temp $pdf");
+if ($^O eq 'linux') {
+    system("wkhtmltopdf -B 20mm -L 25mm -R 20mm -T 20mm $temp $pdf");
+} else {
+    my $path = "U:\\Dokumente\\M152\\HomeageGIBZ";
+    system("C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe -B 20mm -L 25mm -R 20mm -T 20mm $path\\$temp $path\\$pdf");
+}
 
 unlink $temp;
 
