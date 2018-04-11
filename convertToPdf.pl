@@ -35,7 +35,7 @@ close $out;
 
 
 say "Generating PDF...";
-system("wkhtmltopdf $temp $pdf");
+system("wkhtmltopdf -B 20mm -L 25mm -R 20mm -T 20mm $temp $pdf");
 
 unlink $temp;
 
