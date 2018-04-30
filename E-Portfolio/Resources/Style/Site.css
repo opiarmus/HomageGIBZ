@@ -27,3 +27,7 @@
 	.subtitle {
 		font-style: italic;
 	}
+	
+	video {
+		display: block;
+	}
