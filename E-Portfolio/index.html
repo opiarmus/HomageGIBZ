@@ -6,28 +6,76 @@
 	<link rel="stylesheet" type="text/css" href="Resources/Style/Site.css" />
   </head>
 
+  <script>
+    // Open the Modal
+    function openModal() {
+      document.getElementById('myModal').style.display="block";
+    }
+
+    // Close the Modal
+    function closeModal() {
+      document.getElementById('myModal').style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+  </script>
+
   <body>
     <h1>Hommage ans GIBZ</h1>
     <h3>Geliebte Leserin, geneigter Leser</h3>
     
-    <p>Beim Betrachten der Seite mag einem <i>ego cogito, ergo sum</i> von Renatus Decartius aus seinen <i>Principia philosophiae</i> in den Sinn kommen. Der Mensch denkt, also ist er. Aber auch das GIBZ <i>ist</i> und dies gibt einem zu denken.
+    <p>Beim Betrachten der Seite mag einem <i>ego cogito, ergo sum</i> von Renatus Cartesius aus seinen <i>Principia philosophiae</i> in den Sinn kommen. Der Mensch denkt, also ist er. Aber auch das GIBZ <i>ist</i> und dies gibt einem zu denken.
     </p>
 	
-	<video width="720" poster="Resources\Images\Sonstige\Eingang_Poster.jpg" controls loop muted>
-	  <source src="Resources\Videos\720p\Eingang.mp4" type="video/mp4">
-	  Sone Löli. Your browser does not support the video tag.
-	</video>
+    <video width="720" poster="Resources\Images\Sonstige\Eingang_Poster.jpg" controls loop muted>
+      <source src="Resources\Videos\720p\Eingang.mp4" type="video/mp4" />
+	Sone Löli. Your browser does not support the video tag.
+    </video>
 	
 	
 	
 	
 	
-	<video height="720" poster="Resources\Images\Sonstige\Gang_Poster.jpg" controls loop muted>
-	  <source src="Resources\Videos\720p\Gang.mp4" type="video/mp4">
-	  Sone Löli, scho wider. Your browser does not support the video tag.
-	</video>
+    <video height="720" poster="Resources\Images\Sonstige\Gang_Poster.jpg" controls muted>
+      <source src="Resources\Videos\720p\Gang.mp4" type="video/mp4" />
+      Sone Löli, scho wider. Your browser does not support the video tag.
+    </video>
 	
-	
+
+    <div id="myModal">
+      <div class="mySlides">
+
+      </div>
+    </div>
 	
   </body>
 </html>
