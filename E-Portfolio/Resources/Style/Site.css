@@ -40,7 +40,7 @@ ul.topNav li a:hover {
 
 ul.topNav li.right {float: right;}
 
-@media screen and (max-width: 600'px) {
+@media screen and ('max-width: 600'px) {
 	ul.topNav li.right,
 	ul.topNav li {float: none;}
 }
