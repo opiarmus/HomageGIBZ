@@ -4,13 +4,15 @@ body {
 }
 
 #contentWrapper {
+	display: block;
 	width: 75%;
 	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 15px;
-	display: block;
-	background-color: white;
+	padding: 20px;
+	background-color: #FAFAFA;
+	border: 5px solid #800000;
+	border-radius: 20px;
 }
 
 /* Navigation bar on top of page */
@@ -18,8 +20,9 @@ ul.topNav {
     list-style-type: none;
     margin: 0;
     padding: 0;
+		border-radius: 10px;
     overflow: hidden;
-    background-color: #333;
+    background-color: #800000;
 }
 
 ul.topNav li {
@@ -35,7 +38,7 @@ ul.topNav li a {
 }
 
 ul.topNav li a:hover {
-    background-color: #111;
+    background-color: black;
 }
 
 ul.topNav li.right {float: right;}
@@ -46,12 +49,35 @@ ul.topNav li.right {float: right;}
 }
 
 #logoImage {
-	margin-right: 10px;
+	margin: 30px;
 	float: right;
+}
+
+h1 {
+	color: #800000;
+}
+
+/* Separator */
+hr {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #800000;
 }
 
 video {
 	display: block;
+	border: 3px solid #800000;
+}
+
+.centerVideo {
+	margin: 0 auto;
+	width: 50%;
+}
+
+.clearFix {
+	clear: both;
 }
 
 .subtitle {
