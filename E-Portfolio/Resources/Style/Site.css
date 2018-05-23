@@ -71,9 +71,16 @@ video {
 	border: 3px solid #800000;
 }
 
+#widioContainer {
+	text-align: center;
+}
+	#widioContainer label {
+		display: block;
+		margin: 10px 0px 20px 0px;
+	}
+
 .centerVideo {
 	margin: 0 auto;
-	width: 50%;
 }
 
 .clearFix {
@@ -96,8 +103,21 @@ video {
 
 /* Create four equal columns that floats next to eachother */
 .column {
+	position: relative;
 	float: left;
-	width: 25%;
+	width: 23%;
+	height: 300px;
+}
+
+.column img {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	max-width: 98%;
+	max-height: 98%;
 }
 
 /* The Modal (background) */
