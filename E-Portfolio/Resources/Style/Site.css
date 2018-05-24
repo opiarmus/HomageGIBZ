@@ -43,7 +43,7 @@ ul.topNav li a:hover {
 
 ul.topNav li.right {float: right;}
 
-@media screen and ('max-width: 600'px) {
+@media screen and (max-width: 600px) {
 	ul.topNav li.right,
 	ul.topNav li {float: none;}
 }
@@ -89,6 +89,15 @@ video {
 
 .subtitle {
 	font-style: italic;
+}
+
+#impressum {
+	text-align: center;
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
 }
 
 .row > .column {
